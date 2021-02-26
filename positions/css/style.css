@@ -1,0 +1,76 @@
+*{ box-sizing: border-box;}
+
+.relative-wrapper{
+    width: 200px;   
+    height: 200px;
+    border: 5px solid rgb(240, 14, 14);
+    display: block;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+ }
+
+.relative-wrapper-img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: allx 5s ease;
+}
+.relative-wrapper:hover img{
+    top:-100%;
+    cursor: pointer;
+}
+.relative-wrapper p{
+    width:100%;
+    height:100%;
+    background:#ddd;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+    position: absolute;
+    top:100%;
+    transition: all .5s ease;
+}
+.relative-wrapper:hover p{
+    top:0;
+}
+
+.btn-plus{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:yellow;
+    font-size:18px;
+}
+.pseudo-class-sample{
+    height:30px;
+    border:1px solid #ccc;
+    border-radius:3px;
+}
+.pseudo-class-sample:hover{/*cuando tiene el cursor encima*/
+    box-shadow:3px 3px 3px red;
+}
+.pseudo-class-sample:focus{/*cuando voy a escribir en un input*/
+    border:2px solid purple;
+    outline:none;
+}
+.pseudo-class-sample:enabled{/*cuando un input esta habilitado*/
+    background:rgba(180,20,240,.3)
+}
+.img-wrapper{
+    width:200px;
+    height:200px;
+}
+.img-wrapper img{
+    width:100%;
+}
+.img-wrapper:hover img{
+    cursor: pointer;
+    filter: sepia(100%) blur(10px);
+}

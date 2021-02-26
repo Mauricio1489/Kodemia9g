@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        function imprimir() {
+            console.log(this.responseText);
+        }
+        /*Objeto que guarda datos a enviar*/
+        var data ={nombre:"Bart",apellido: "Simpson"}
+
+        var http = new XMLHttpRequest();
+        http.addEventListener("load", imprimir);
+        http.open("PUT", "https://ajaxclass9g.firebaseio.com/.json");
+        data = JSON.stringify(data)
+        http.send(data);
+    </script>
+</body>
+
+</html>
